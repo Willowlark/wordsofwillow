@@ -2,8 +2,11 @@
 
 - type: bluesky
   icon: 'fa-brands fa-bluesky'
-  url: 'https://bsky.app/profile/thelittlethingswemiss.us' # Fill with your Bluesky profile link
+  url: 'https://bsky.app/profile/thelittlethingswemiss.us'
 
+- type: discord
+  icon: 'fa-brands fa-discord'
+  url: 'https://discord.com/users/184437198865563648'
 
 # - type: github
 #   icon: "fab fa-github"
@@ -18,6 +21,7 @@
 - type: rss
   icon: "fas fa-rss"
   noblank: true
+
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon

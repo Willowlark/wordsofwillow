@@ -22,6 +22,7 @@ image: Pasted image 20250604163751.png
 
 ## Mechanics
 
+
 A Contest is judged by three **Judges**. Each Judge is assigned two Social Attributes that they rate higher than the rest. The first Social Attribute is given 3 Hearts, the second 2 Hearts, and the rest for that Judge are zero Hearts. Players *do not* know what Attributes their Judges care about at the start of the contest! 
 
 > Serena is contest judge. She values Beauty at 2 Hearts and Cuteness at 1 Heart, but doesn't award Hearts for Clever, Cool, or Tough Appeals. 
