@@ -117,10 +117,11 @@ def _filetowiki(article):
     
     collection_path = os.path.join('_obsidian', article.yaml.get('doku'))
     os.makedirs(collection_path,exist_ok=True)
+    os.makedirs(os.path.join('_posts', 'imported'),exist_ok=True)
     if 'postdate' in article.yaml:
         ispost = True
         outname = str(article.yaml['postdate'])+'-'+slugify(article.filename)
-        post_output_path = os.path.join('_posts', outname)
+        post_output_path = os.path.join('_posts', 'imported', outname)
     else: ispost = False
     output_path = os.path.join(collection_path, article.filename)
     
