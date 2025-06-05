@@ -9,7 +9,7 @@ class Article:
     
     # Providing Namespace is an override for this file. 
     def __init__(self, path):
-        print("Creating Article for: ", path)
+        #print("Creating Article for: ", path)
         self.path = path 
         
         if os.path.isdir(self.path): 
@@ -115,6 +115,8 @@ def _transfer(article, namespace=None):
       
 def _filetowiki(article):
     
+    print("Importing Article for:", article.path)
+    
     collection_path = os.path.join('_obsidian', article.yaml.get('doku'))
     os.makedirs(collection_path,exist_ok=True)
     os.makedirs(os.path.join('_posts', 'imported'),exist_ok=True)
@@ -196,7 +198,11 @@ def jekyll_link_fix(collection_path):
         if len(details)>1 and not details[0]: # Heading, same page.
             jekyll_link = '#'+slugify(details[1])
         else: 
-            jekyll_link = '{% link '+ os.path.join(collection_path, details[0])+'.md %}'
+            if not re.search(".*\\.\\w{3}$", details[0]):
+                jekyll_link = '{% link '+ os.path.join(collection_path, details[0])+'.md %}'
+            else: 
+                jekyll_link = '{% link '+ os.path.join('assets', 'uploads', details[0])+' %}'
+                
         # Assumes that the extension is markdown. Kinda have to since extension isn't in markdown.
         return f"""[{text}]({jekyll_link})"""
     return inner
