@@ -13,8 +13,8 @@ def _delete_folder(path):
     os.chdir(path)
     fs = [x for x in os.listdir() if 'photography' not in x]
     for f in fs:
-        print(f'rm -r {f}')
-        os.system(f'rm -r {f}')
+        print(f'rm -r "{f}"')
+        os.system(f'rm -r "{f}"')
     print()
 
 def clean_repo():

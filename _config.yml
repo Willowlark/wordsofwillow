@@ -98,7 +98,7 @@ avatar: assets/Words Logo.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
-social_preview_image: assets/Words Logo Inverted.png
+social_preview_image: assets/img/favicons/favicon-96x96.png
 
 # boolean type, the global switch for TOC in posts.
 toc: true
